@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Movie = ({ movie }) => {
+  console.log('Movie');
   const isFavorite = false;
 
   return (

@@ -3,6 +3,7 @@ import initialMovies from '../consts/initialMovies';
 import Movie from './Movie';
 
 const MovieList = () => {
+  console.log('MovieList');
   return (
     <div className='container'>
       <div className='row'>
