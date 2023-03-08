@@ -15,7 +15,19 @@ const UserProvider = ({ children }) => {
     setUser(null);
   };
 
-  const data = { user, login, logout };
+  const toggleFavoriteMovieToUser = (movieId) => {
+    const isFavorite = user.favorites.includes(movieId);
+    const favorites = isFavorite
+      ? user.favorites.filter((favMovieId) => favMovieId !== movieId)
+      : [...user.favorites, movieId];
+
+    setUser({
+      ...user,
+      favorites: favorites,
+    });
+  };
+
+  const data = { user, login, logout, toggleFavoriteMovieToUser };
 
   return <UserContext.Provider value={data}>{children}</UserContext.Provider>;
 };
