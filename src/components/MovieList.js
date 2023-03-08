@@ -3,8 +3,12 @@ import Movie from './Movie';
 
 const MovieList = () => {
   return (
-    <div>
-      <Movie />
+    <div className='container'>
+      <div className='row'>
+        <div className='col-md-4'>
+          <Movie />
+        </div>
+      </div>
     </div>
   );
 };
